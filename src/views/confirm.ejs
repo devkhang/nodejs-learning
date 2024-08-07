@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+          <a href="#" class="brand">User management</a>
+          <ul class="nav">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/create">create User</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropbtn">Services</a>
+              <div class="dropdown-content">
+                <a href="#">Service 1</a>
+                <a href="#">Service 2</a>
+                <a href="#">Service 3</a>
+              </div>
+            </li>
+            <li><a href="#">Contact</a></li> -->
+          </ul>
+        </div>
+      </nav>
+      <%= JSON.stringify(user[0]) %>
+    <form action="/delete" method="post">
+        <fieldset>
+          <input type="hidden" name="id" value="<%= user[0].id %>">
+          <legend>confirm_user</legend>
+          <label for="fname">are you sure to delete this email User :</label>
+          <input type="text" id="fname" name="fname" value="<%= user[0].email %>"><br><br>
+          <button>ok</button>
+    </fieldset>
+</body>
+</html>
